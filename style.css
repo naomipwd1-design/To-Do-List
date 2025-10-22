@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #9B2226;
+  --text-color: #333;
+  --accent-color: #EE9B00;
+  --font-family: "Spectral", serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, #fda500, #d46a00);
+  color: var(--text-color);
+  text-shadow: 1px 1px 2px #33333352;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.todo-app {
+  background: #bb3d039d;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+select {
+  flex: 1 1 60%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+.category-group {
+  margin-top: 1.5rem;
+}
+
+.category-group h2 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  background: #eee;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-list li button {
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+}
